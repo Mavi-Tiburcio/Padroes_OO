@@ -1,16 +1,16 @@
 public class ObservarDiscagem implements Observar {
     private Tela tela;
-    private ModeloTelefone modelo;
+    private ModeloTelefone model;
 
-    public ObservarDiscagem(Tela tela, ModeloTelefone modelo) {
+    public ObservarDiscagem(Tela tela, ModeloTelefone model) { // criar um novo observador de discagem
         this.tela = tela;
-        this.modelo = modelo;
+        this.model = model;
     }
 
     @Override
     public void update(String numero) {
         if (numero.length() == 12) {
-            tela.display("Agora discando " + modelo.getNumero() + "...");
+            tela.display("Agora discando " + model.getNumero() + "...");
         }
     }
 }
